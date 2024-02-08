@@ -18,7 +18,7 @@ export default {
   data() {
     return {
       userData: {
-        username: this.$store.getters.getUsuario,
+        username: this.$store.getters.getID,
         password: ''
       },
     };

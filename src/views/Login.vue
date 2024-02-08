@@ -38,11 +38,11 @@ export default {
         if(response.status === 200){
           this.$store.dispatch('addUser', response.data.data[0].usrname);
           this.$store.dispatch('addId', response.data.data[0].id);
-         console.log(response.data.data[0].id)
+           this.$router.push('/notas');
         }
       } catch (error) {
         console.error('Error al iniciar sesión:', error);
-        this.loginError = true; // Si hay un error en la solicitud, establece loginError a true
+        this.loginError = true;
       }
     }
   }
