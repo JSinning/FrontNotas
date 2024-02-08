@@ -1,7 +1,8 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HelloWorld msg="HELLO WORED"/>
+    <p>{{ userData.username }}</p>
   </div>
 </template>
 
@@ -13,6 +14,14 @@ export default {
   name: 'Home',
   components: {
     HelloWorld
-  }
+  },
+  data() {
+    return {
+      userData: {
+        username: this.$store.getters.getUsuario,
+        password: ''
+      },
+    };
+  },
 }
 </script>
