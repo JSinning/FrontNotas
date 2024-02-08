@@ -1,8 +1,7 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="HELLO WORED"/>
-    <p>{{ userData.username }}</p>
+    <HelloWorld :username=userData.username :Id=userData.id  />
   </div>
 </template>
 
@@ -18,8 +17,8 @@ export default {
   data() {
     return {
       userData: {
-        username: this.$store.getters.getID,
-        password: ''
+        username: this.$store.getters.getUsuario,
+        id: this.$store.getters.getID.toString() 
       },
     };
   },
